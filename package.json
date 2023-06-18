@@ -38,5 +38,17 @@
   },
   "name": "learn-react-native",
   "version": "1.0.0",
-  "private": true
+  "private": true,
+  "description": "Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nrohan09-cloud/learn-react-native.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nrohan09-cloud/learn-react-native/issues"
+  },
+  "homepage": "https://github.com/nrohan09-cloud/learn-react-native#readme"
 }
