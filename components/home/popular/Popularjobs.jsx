@@ -6,10 +6,15 @@ import styles from './popularjobs.style';
 import { COLORS, SIZES } from '../../../constants';
 import PopularjobsCard from '../../common/cards/popular/PopularJobCard';
 
+import useFetch from '../../hook/useFetch';
+
 const Popularjobs = () => {
   const router = useRouter();
-  const isLoading = false;
-  const error = false; // Add error state
+  const {data, isLoading, error} = useFetch(
+    'search',
+    {query: 'React Developer',
+    num_pages: 1}
+  )
 
   const handleRefresh = () => {
     // Handle refresh logic here, if needed
@@ -30,7 +35,7 @@ const Popularjobs = () => {
           <Text>Something went wrong</Text>
         ) : (
           <FlatList
-            data={[1, 2, 3, 4, 5, 6, 7, 8, 9]}
+            data={data} 
             renderItem={({ item }) => (
               <PopularjobsCard
                 item={item}
