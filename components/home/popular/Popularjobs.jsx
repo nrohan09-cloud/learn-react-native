@@ -4,7 +4,7 @@ import { useRouter } from 'expo-router';
 
 import styles from './popularjobs.style';
 import { COLORS, SIZES } from '../../../constants';
-import PopularjobsCard from '../../common/cards/popular/PopularJobCard';
+import PopularJobCard from '../../common/cards/popular/PopularJobCard';
 
 import useFetch from '../../hook/useFetch';
 
@@ -15,6 +15,9 @@ const Popularjobs = () => {
     {query: 'React Developer',
     num_pages: 1}
   )
+  const [selectedJob, setSelectedJob] = useState()
+
+  const handleCardPress = (item) => {}
 
   const handleRefresh = () => {
     // Handle refresh logic here, if needed
@@ -37,7 +40,7 @@ const Popularjobs = () => {
           <FlatList
             data={data} 
             renderItem={({ item }) => (
-              <PopularjobsCard
+              <PopularJobCard
                 item={item}
               />
             )}
